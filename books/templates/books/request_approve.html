@@ -1,0 +1,30 @@
+<html>
+<head></head>
+<body>
+    <div class="content-section">
+    <form method="POST">
+    {% csrf_token %}
+        <fieldset class="form-group">
+    <legend class="border-bottom" mb-4>
+       Approve
+    </legend>
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-success" type="submit" id="ApproveButton">Approve</button>
+            <a href="#" class="btn btn-outline-secondary">Cancel</a>
+        </div>
+    </form>
+    </div>
+<script>
+    let button = document.getElementById("ApproveButton");
+    button.addEventListener("click", timer)
+    function timer(){
+        let i=0;
+        setInterval(function(){
+            i++;
+            console.log(i);
+        }, 1000);
+    }
+</script>
+</body>
+</html>
